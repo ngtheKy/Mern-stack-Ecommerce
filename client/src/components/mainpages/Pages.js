@@ -10,8 +10,10 @@ import Cart from './cart/Cart'
 import NotFound from './utils/not_found/NotFound'
 import Categories from './categories/Categories'
 import CreateProduct from './createProduct/CreateProduct'
+import Footer from '../footer/footer';
 
 import { GlobalState } from '../../GlobalState'
+import Slideshow from './utils/slider/slide'
 
 
 function Pages() {
@@ -22,7 +24,8 @@ function Pages() {
 
     return (
         <Switch>
-            <Route path="/" exact component={Products} />
+            <Route path="/" exact component={Slideshow} />
+            <Route path='/products' exact component={Products} />
             <Route path="/detail/:id" exact component={DetailProduct} />
 
             <Route path="/login" exact component={isLogged ? NotFound : Login} />
@@ -39,6 +42,7 @@ function Pages() {
 
 
             <Route path="*" exact component={NotFound} />
+
         </Switch>
     )
 }

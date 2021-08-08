@@ -1,7 +1,10 @@
+
 .cart{
     position: relative;
     border: 1px solid #ccc;
     transform: scaleY(0.98);
+    width: 70%;
+    margin-left: 10%;
 }
 .amount span{
     color: crimson;
@@ -26,6 +29,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
 }
 .total h3{
     color: crimson;

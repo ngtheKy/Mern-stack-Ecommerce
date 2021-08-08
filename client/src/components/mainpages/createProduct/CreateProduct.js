@@ -11,6 +11,7 @@ const initialState = {
     description: 'Mô tả sản phẩm',
     content: 'Mô tả sản phẩm',
     category: '',
+    sex: ['nam', 'nữ'],
     _id: ''
 }
 
@@ -20,7 +21,7 @@ function CreateProduct() {
     const [categories] = state.categoriesAPI.categories
     const [images, setImages] = useState(false)
     const [loading, setLoading] = useState(false)
-
+    const [sex, setSex] = useState(initialState)
 
     const [isAdmin] = state.userAPI.isAdmin
     const [token] = state.token
@@ -179,6 +180,13 @@ function CreateProduct() {
                             ))
                         }
                     </select>
+
+                </div>
+                <div className='row'>
+
+
+
+
                 </div>
 
                 <button type="submit">{onEdit ? "Update" : "Create"}</button>

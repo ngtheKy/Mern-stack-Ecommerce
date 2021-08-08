@@ -43,10 +43,21 @@ function DetailProduct() {
             </div>
 
             <div>
-                <h2>Related products</h2>
+                <h2>Sản phẩm tương ứng</h2>
                 <div className="products">
                     {
-                        products.map(product => {
+                        products.slice(0, 5).map(product => {
+                            return product.category === detailProduct.category
+                                ? <ProductItem key={product._id} product={product} /> : null
+                        })
+                    }
+                </div>
+            </div>
+            <div>
+                <h2>Mặc cùng với</h2>
+                <div className="products">
+                    {
+                        products.slice(3, 7).map(product => {
                             return product.category === detailProduct.category
                                 ? <ProductItem key={product._id} product={product} /> : null
                         })
